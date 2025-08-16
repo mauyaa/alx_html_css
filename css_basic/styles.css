@@ -6,6 +6,8 @@ body {
   flex-direction: column;
   height: 100vh; /* Full viewport height */
   margin: 0; /* Remove default margin */
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
 }
 
 /* Main: flex container, row layout */
@@ -45,6 +47,7 @@ footer {
   background-color: #0a9396;
   color: white;
   padding: 1rem;
+  text-align: center;
 }
 
 /* === Typography & Navigation === */
@@ -81,7 +84,7 @@ header nav ul li a:hover {
   text-decoration: underline;
 }
 
-/* === Scrollbar (optional) styling for article and aside for modern browsers */
+/* === Scrollbar Styling (modern browsers) === */
 article::-webkit-scrollbar,
 aside::-webkit-scrollbar {
   width: 8px;
@@ -93,6 +96,17 @@ aside::-webkit-scrollbar-thumb {
   border-radius: 4px;
 }
 
-/* === Responsive Design handled by base.css and body class 'works_on_smartphone' === */
+/* === Responsive Design === */
+/* Base responsiveness handled by base.css with works_on_smartphone */
+/* You can add extra tweaks here if needed */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
 
-/* You can add additional custom responsive tweaks here if you want */
+  article,
+  aside {
+    flex: auto;
+    width: 100%;
+  }
+}
